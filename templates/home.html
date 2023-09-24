@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do app</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add a Todo</h1>
+      <form action="/" method="POST">
+        <div>
+          <label for="title">Todo Title:</label>
+          <input type="text" name="title" />
+        </div>
+        <div>
+          <label for="desc">Todo Description:</label>
+          <input type="text" name="desc" />
+        </div>
+        <input type="submit" value="Submit" class="submit-button" />
+      </form>
+      <h2>Your Todos</h2>
+      {% if allTodo|length>0 %}
+      <table>
+        <thead>
+          <th>S.No.</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Time</th>
+          <th colspan="2">Actions</th>
+        </thead>
+        <tbody>
+          {% for todo in allTodo %}
+          <tr>
+            <td>{{loop.index}}</td>
+            <td>{{todo.title}}</td>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.date_created}}</td>
+            <td>
+              <a href="/update/{{todo.sno}}" type="button" class="update button"
+                >Update</a
+              >
+            </td>
+            <td>
+              <a href="/delete/{{todo.sno}}" type="button" class="delete button"
+                >Delete</a
+              >
+            </td>
+          </tr>
+          {% endfor %} {% else %}
+          <h3>No Record found! Create the first one.</h3>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

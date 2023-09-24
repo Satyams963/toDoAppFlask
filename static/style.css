@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(233, 231, 231);
+    margin: 20px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
+
+@media (min-width:800px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container form {
+        margin-top: 15px;
+        width: 100vb;
+    } 
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px;
+    }
+    div input {
+        border-radius: 5px;
+        margin-left: 10px;
+        width: 600px;
+        background-color: rgb(248, 252, 252);
+    }
+    .container table {
+        width: 100vb;
+    }
+    
+    h1, h2, h3 {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+.container table thead th{
+    border-bottom: 2px solid black;
+    background-color: #dcd6f0;
+}
+.submit-button {
+    margin-top: 10px;
+    background-color: rgb(168, 238, 93);
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    padding: 0px 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.update {
+    background-color: rgb(100, 219, 100);
+}
+ 
+.delete {
+    background-color: rgb(231, 70, 70);
+}
