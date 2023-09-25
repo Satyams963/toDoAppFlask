@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<!-- code here -->
+
+<div class="container">
+  <form method="POST">
+    <!-- Cross Site Request Foregery Token -->
+    {{ form.hidden_tag() }}
+    <fieldset>
+      <legend>Login</legend>
+      <div>{{ form.email.label }} {{ form.email }}</div>
+      <div>{{ form.password.label }} {{ form.password}}</div>
+    </fieldset>
+    <div>{{ form.submit}}</div>
+  </form>
+  <div>
+    <small
+      >Don't have an account?
+      <a href="{{ url_for('register') }}" style="text-decoration: none"
+        >Sigh up</a
+      ></small
+    >
+  </div>
+</div>
+
+{% endblock %}

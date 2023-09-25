@@ -42,7 +42,24 @@ body {
         display: flex;
         justify-content: center;
     }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        background-color: black;
+        color: white;
+        width: 100vb;
+        margin: 0;
+    }
 
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
 }
 
 
@@ -51,6 +68,11 @@ body {
     border-bottom: 2px solid black;
     background-color: #dcd6f0;
 }
+.container table tbody tr td {
+    border-bottom: 1px solid black;
+    padding: 5px 5px;
+}
+
 .submit-button {
     margin-top: 10px;
     background-color: rgb(168, 238, 93);
@@ -72,4 +94,26 @@ body {
  
 .delete {
     background-color: rgb(231, 70, 70);
+}
+
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 15px 10px 10px 10px;
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+   
+}
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin: 15px 10px 10px 10px;
+   
 }
